@@ -38,16 +38,14 @@ parts:
       - CXX: /usr/bin/g++-14
     cmake-parameters:
       - -DCMAKE_BUILD_TYPE=Release
-      - -DCMAKE_C_COMPILER_LAUNCHER=${CCACHE}
-      - -DCMAKE_CXX_COMPILER_LAUNCHER=${CCACHE}
       - -DIMHEX_PATTERNS_PULL_MASTER=ON
       - -DIMHEX_BUNDLE_PLUGIN_SDK=OFF
     cmake-generator: Ninja
     build-packages:
       - cmake
       - ninja-build
-      - gcc-14
-      - g++-14
+      - gcc-16
+      - g++-16
       - git
       - pkg-config
       - libglfw3-dev
